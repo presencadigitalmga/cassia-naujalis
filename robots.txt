@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /cassia-naujalis/curriculo.html
+Disallow: /cassia-naujalis/assinatura-email.html
+Sitemap: https://presencadigitalmga.github.io/cassia-naujalis/sitemap.xml

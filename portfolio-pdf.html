@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfólio PDF · Cassia Naujalis</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112,700;112,800&family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap">
+<style>
+/* Versão para PDF do portfólio (A4 paisagem). Gerar com Ctrl+P → Salvar como PDF, margens "Nenhuma", gráficos de fundo ativados. */
+:root { --ink:#2A2625; --ink-2:#524F4E; --ink-3:#8A827B; --cream:#FAF2E3; --paper:#FFFCF6; --line:#E4D8C4; --caramel:#D4A786; --caramel-2:#B8783F; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+body { font-family:"Instrument Sans",Arial,sans-serif; color:var(--ink); background:#ccc; font-size:10.5pt; line-height:1.5; }
+@page { size:A4 landscape; margin:0; }
+.pg { width:297mm; height:210mm; background:var(--cream); position:relative; overflow:hidden; page-break-after:always; margin:0 auto 6mm; padding:16mm 18mm; }
+@media print { body { background:#fff; } .pg { margin:0; } }
+.eye { font-size:7.5pt; letter-spacing:.18em; text-transform:uppercase; color:var(--caramel-2); font-weight:600; }
+h1, h2 { font-family:"Archivo",Arial,sans-serif; font-stretch:112%; font-weight:800; text-transform:uppercase; line-height:.95; letter-spacing:-.01em; }
+h1 { font-size:64pt; } h2 { font-size:26pt; margin-top:2mm; }
+.serif { font-family:"Instrument Serif",Georgia,serif; font-style:italic; color:var(--caramel-2); }
+.num { position:absolute; right:18mm; bottom:10mm; font-size:7.5pt; color:var(--ink-3); letter-spacing:.1em; }
+.bar { position:absolute; left:0; top:0; bottom:0; width:6mm; background:var(--caramel); }
+/* capa */
+.cover { background:var(--ink); color:var(--cream); }
+.cover h1 { margin-top:6mm; }
+.cover .serif { font-size:18pt; color:var(--caramel); margin-top:6mm; }
+.cover .grid { position:absolute; right:18mm; top:16mm; display:grid; grid-template-columns:repeat(2,44mm); gap:3mm; }
+.cover .grid img { width:44mm; height:44mm; object-fit:cover; display:block; }
+.cover .foot { position:absolute; left:24mm; bottom:14mm; font-size:9pt; color:var(--caramel); }
+/* sobre */
+.two { display:grid; grid-template-columns:1fr 1fr; gap:14mm; margin-top:8mm; }
+.two p + p { margin-top:4mm; } .two p { color:var(--ink-2); }
+.ficha { border:.5mm solid var(--ink); padding:5mm 6mm; background:var(--paper); font-size:9.5pt; }
+.ficha .t { font-family:"Archivo",Arial,sans-serif; font-stretch:112%; font-weight:800; text-transform:uppercase; font-size:13pt; border-bottom:1.5mm solid var(--ink); padding-bottom:1.5mm; }
+.ficha .r { display:flex; justify-content:space-between; padding:1.6mm 0; border-bottom:.2mm solid var(--line); } .ficha .r:last-child { border-bottom:1.5mm solid var(--ink); }
+.ficha .r span:last-child { color:var(--ink-2); }
+/* serviços */
+.serv { display:grid; grid-template-columns:repeat(4,1fr); gap:.4mm; background:var(--line); border:.3mm solid var(--line); margin-top:8mm; }
+.serv div { background:var(--cream); padding:6mm 5mm; } .serv b { display:block; font-family:"Archivo",Arial,sans-serif; font-stretch:112%; text-transform:uppercase; font-size:10.5pt; margin:2mm 0; }
+.serv p { font-size:9pt; color:var(--ink-2); }
+/* trabalhos */
+.works { display:grid; grid-template-columns:repeat(4,1fr); gap:6mm; margin-top:7mm; }
+.w img { width:100%; aspect-ratio:1; object-fit:cover; display:block; border:.3mm solid var(--line); }
+.w b { display:block; font-size:9.5pt; margin-top:2mm; } .w small { display:block; font-size:7.5pt; color:var(--caramel-2); text-transform:uppercase; letter-spacing:.08em; font-weight:600; }
+.w p { font-size:8pt; color:var(--ink-2); line-height:1.4; margin-top:1mm; }
+.works.three { grid-template-columns:repeat(3,1fr); } .works.three .w img { aspect-ratio:4/5; }
+/* contato */
+.contact { display:grid; grid-template-columns:1fr 60mm; gap:14mm; align-items:center; margin-top:8mm; }
+.contact .l { font-size:12pt; line-height:2; }
+.contact img { width:50mm; }
+</style>
+</head>
+<body>
+
+<section class="pg cover">
+  <div class="bar"></div>
+  <span class="eye" style="color:var(--caramel)">Portfólio · 2026</span>
+  <h1>Cassia<br>Naujalis</h1>
+  <div class="serif">Analista de marketing · Arte-finalista</div>
+  <div class="grid">
+    <img src="assets/img/posts/p06_00.jpg" alt=""><img src="assets/img/posts/p07_00.jpg" alt="">
+    <img src="assets/img/posts/p04_02.jpg" alt=""><img src="assets/img/posts/p03_01.jpg" alt="">
+  </div>
+  <div class="foot">"Tudo comunica, e eu faço isso com intenção."</div>
+</section>
+
+<section class="pg">
+  <span class="eye">Sobre</span>
+  <h2>Estratégia que vira peça pronta</h2>
+  <div class="two">
+    <div>
+      <p>Profissional de marketing formada em 2018, com foco desde a graduação na área estratégica. Experiência em desenvolver e executar planos de marketing abrangentes, realizar análises de mercado para identificar tendências e oportunidades, e contribuir para o posicionamento e crescimento da marca.</p>
+      <p>Na prática, finalizo o que planejo: posts, rótulos, banners, fachadas e vídeos. Forte interesse em abordagens inovadoras e na aplicação de dados para otimizar estratégias e alcançar resultados mensuráveis. Em desenvolvimento na área comercial.</p>
+      <div class="serv" style="grid-template-columns:repeat(2,1fr)">
+        <div><span class="eye">Estratégia</span><b>Planejamento</b><p>Plano de marketing, análise de mercado, calendário editorial.</p></div>
+        <div><span class="eye">Social media</span><b>Conteúdo</b><p>Datas, causas, depoimentos, promoções e lançamentos.</p></div>
+        <div><span class="eye">Embalagem</span><b>Rótulos</b><p>Suplementos, cosméticos e alimentos funcionais.</p></div>
+        <div><span class="eye">Vídeo e visual</span><b>Vídeo e PDV</b><p>Roteiro, filmagem, edição; banners e fachadas.</p></div>
+      </div>
+    </div>
+    <div class="ficha">
+      <div class="t">Ficha profissional</div>
+      <div class="r"><span>Formação</span><span>Marketing · UNICV · 2016–2018</span></div>
+      <div class="r"><span>Pós</span><span>Gestão Comercial · UNICV · 2019–2021</span></div>
+      <div class="r"><span>Atuação desde</span><span>2018</span></div>
+      <div class="r"><span>Frentes</span><span>Estratégia · Social · Rótulos · Vídeo</span></div>
+      <div class="r"><span>Segmentos</span><span>Saúde · Farmácia · Seguros</span></div>
+      <div class="r"><span>Clientes</span><span>PAM Saúde · MFSP · Dr. Borgonhone · Covery</span></div>
+      <div class="r"><span>Cidade</span><span>Maringá, PR</span></div>
+    </div>
+  </div>
+  <div class="num">02</div>
+</section>
+
+<section class="pg">
+  <span class="eye">Social media · PAM Saúde</span>
+  <h2>Conteúdo que constrói confiança</h2>
+  <div class="works">
+    <div class="w"><img src="assets/img/posts/p03_00.jpg" alt=""><small>Data comemorativa</small><b>Dia das Mães</b><p>Imagem emotiva para reforçar laços familiares e associar a marca a carinho.</p></div>
+    <div class="w"><img src="assets/img/posts/p03_02.jpg" alt=""><small>Depoimento</small><b>Beneficiária Marli Pivatto</b><p>Experiência real de cliente para gerar credibilidade.</p></div>
+    <div class="w"><img src="assets/img/posts/p04_02.jpg" alt=""><small>Campanha de causa</small><b>Setembro Amarelo</b><p>Responsabilidade social e apoio à saúde mental.</p></div>
+    <div class="w"><img src="assets/img/posts/p04_03.jpg" alt=""><small>Conversão</small><b>Faça uma cotação</b><p>Lembrete de saúde com chamada para ação direta.</p></div>
+  </div>
+  <div class="num">03</div>
+</section>
+
+<section class="pg">
+  <span class="eye">Social media · PAM Saúde e Manipulação Farmácias São Paulo</span>
+  <h2>Informar, celebrar e vender</h2>
+  <div class="works">
+    <div class="w"><img src="assets/img/posts/p03_01.jpg" alt=""><small>Educativo</small><b>A fruta da felicidade</b><p>Triptofano e bem-estar, alinhado ao Setembro Amarelo.</p></div>
+    <div class="w"><img src="assets/img/posts/p04_01.jpg" alt=""><small>Educativo</small><b>5 benefícios da Vitamina C</b><p>Lista informativa de saúde.</p></div>
+    <div class="w"><img src="assets/img/posts/p05_00.jpg" alt=""><small>Promoção</small><b>Okralin</b><p>Preço especial e benefícios do produto em destaque.</p></div>
+    <div class="w"><img src="assets/img/posts/p05_03.jpg" alt=""><small>Lançamento</small><b>Gummy Tina</b><p>Zero glúten, zero açúcar, sabor maçã verde, performance.</p></div>
+  </div>
+  <div class="num">04</div>
+</section>
+
+<section class="pg">
+  <span class="eye">Criação de rótulos</span>
+  <h2>Embalagem que explica o produto</h2>
+  <div class="works">
+    <div class="w"><img src="assets/img/posts/p06_00.jpg" alt=""><small>MFSP</small><b>Botox Like</b><p>Modernidade, sofisticação e benefícios anti-idade.</p></div>
+    <div class="w"><img src="assets/img/posts/p07_00.jpg" alt=""><small>MFSP</small><b>Gummy Tina</b><p>Verde vibrante para o sabor maçã verde e energia.</p></div>
+    <div class="w"><img src="assets/img/posts/p07_01.jpg" alt=""><small>MFSP</small><b>Ômega 3 Peixinho</b><p>Identidade lúdica para o público infantil.</p></div>
+    <div class="w"><img src="assets/img/posts/p07_02.jpg" alt=""><small>MFSP</small><b>Akkermat</b><p>Alinhado à marca registrada da fórmula.</p></div>
+  </div>
+  <div class="num">05</div>
+</section>
+
+<section class="pg">
+  <span class="eye">Rótulos e comunicação visual</span>
+  <h2>Da prateleira à fachada</h2>
+  <div class="works" style="grid-template-columns:repeat(5,1fr)">
+    <div class="w"><img src="assets/img/posts/p06_01.jpg" alt=""><small>Dr. Eduardo Borgonhone</small><b>Bombom Energia e Força</b><p>Chocolate, vitalidade e pré-treino.</p></div>
+    <div class="w"><img src="assets/img/posts/p06_02.jpg" alt=""><small>Dr. Eduardo Borgonhone</small><b>Bombom Meu Descanso</b><p>Tranquilidade e qualidade do sono.</p></div>
+    <div class="w"><img src="assets/img/posts/p09_00.jpg" alt=""><small>MFSP</small><b>Banner Projeto ODS</b><p>Selos de sustentabilidade com QR Code.</p></div>
+    <div class="w"><img src="assets/img/posts/p09_01.jpg" alt=""><small>Covery Seguros</small><b>Wind banner</b><p>Planos e seguros no ponto de venda.</p></div>
+    <div class="w"><img src="assets/img/posts/p09_02.jpg" alt=""><small>MFSP</small><b>Fachada</b><p>Identidade da marca no ponto físico.</p></div>
+  </div>
+  <div class="num">06</div>
+</section>
+
+<section class="pg">
+  <span class="eye">Contato</span>
+  <h2>Vamos conversar?</h2>
+  <p class="serif" style="font-size:16pt;margin-top:3mm">Produção e edição de vídeo: acesse pelo QR ou pelo site.</p>
+  <div class="contact">
+    <div class="l">
+      <b>(44) 99859-4288</b> · WhatsApp<br>
+      cassia.nau@hotmail.com<br>
+      linkedin.com/in/cassia-naujalis<br>
+      presencadigitalmga.github.io/cassia-naujalis<br>
+      Maringá, PR
+    </div>
+    <img src="assets/qr/qr-site.png" alt="QR Code do cartão digital">
+  </div>
+  <div class="num">07</div>
+</section>
+</body>
+</html>

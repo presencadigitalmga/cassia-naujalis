@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cartão impresso · Cassia Naujalis</title>
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112,700;112,800&family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap">
+<style>
+/* Cartão de visita 90 x 50 mm, frente e verso, com 3 mm de sangria. Salvar em PDF com Ctrl+P (sem margens). */
+:root { --ink:#2A2625; --cream:#FAF2E3; --caramel:#D4A786; --caramel-2:#B8783F; --ink-2:#524F4E; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { font-family: "Instrument Sans", Arial, sans-serif; background: #ddd; color: var(--ink); }
+.info { text-align: center; font-size: 12px; color: #444; padding: 12px; }
+@media print { .info { display: none; } body { background: #fff; } @page { size: 96mm 56mm; margin: 0; } }
+.card { width: 96mm; height: 56mm; margin: 6mm auto; position: relative; overflow: hidden; background: var(--cream); page-break-after: always; }
+.bleed { position: absolute; inset: 3mm; border: .1mm dashed rgba(0,0,0,.25); pointer-events: none; }
+@media print { .bleed { display: none; } }
+/* frente */
+.front { background: var(--ink); color: var(--cream); }
+.front .in { position: absolute; inset: 3mm; padding: 6mm 7mm; display: flex; flex-direction: column; justify-content: space-between; }
+.front .name { font-family: "Archivo", Arial, sans-serif; font-stretch: 112%; font-weight: 800; text-transform: uppercase; font-size: 15pt; line-height: .95; letter-spacing: -.01em; }
+.front .role { font-size: 6pt; letter-spacing: .16em; text-transform: uppercase; color: var(--caramel); font-weight: 600; margin-top: 2.2mm; }
+.front .tag { font-family: "Instrument Serif", Georgia, serif; font-style: italic; font-size: 8.5pt; color: var(--caramel); }
+.front .bar { position: absolute; right: 0; top: 0; bottom: 0; width: 3.5mm; background: var(--caramel); }
+/* verso */
+.back .in { position: absolute; inset: 3mm; padding: 5.5mm 7mm; display: grid; grid-template-columns: 1fr 22mm; gap: 5mm; align-items: center; }
+.back .l { font-size: 7.2pt; line-height: 1.7; color: var(--ink-2); }
+.back .l b { display: block; font-family: "Archivo", Arial, sans-serif; font-stretch: 112%; font-weight: 700; text-transform: uppercase; font-size: 8pt; color: var(--ink); margin-bottom: 1.5mm; letter-spacing: .03em; }
+.back .l span { display: block; }
+.back .l .areas { margin-top: 2mm; font-size: 5.6pt; letter-spacing: .1em; text-transform: uppercase; color: var(--caramel-2); font-weight: 600; }
+.back img { width: 22mm; height: 22mm; display: block; }
+.back .qrl { font-size: 5.2pt; text-align: center; color: var(--ink-2); margin-top: 1mm; letter-spacing: .04em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+<p class="info">Cartão 90 × 50 mm com sangria de 3 mm (área total 96 × 56 mm). A linha tracejada é a linha de corte. Ctrl+P → Salvar como PDF, margens "Nenhuma".</p>
+
+<div class="card front">
+  <div class="bar"></div>
+  <div class="in">
+    <div>
+      <div class="name">Cassia<br>Naujalis</div>
+      <div class="role">Analista de marketing · Arte-finalista</div>
+    </div>
+    <div class="tag">"Tudo comunica, e eu faço isso com intenção."</div>
+  </div>
+  <div class="bleed"></div>
+</div>
+
+<div class="card back">
+  <div class="in">
+    <div class="l">
+      <b>Vamos conversar?</b>
+      <span>(44) 99859-4288</span>
+      <span>cassia.nau@hotmail.com</span>
+      <span>presencadigitalmga.github.io/cassia-naujalis</span>
+      <span>Maringá, PR</span>
+      <div class="areas">Estratégia · Social media · Rótulos · Vídeo</div>
+    </div>
+    <div>
+      <img src="assets/qr/qr-site.png" alt="QR Code do cartão digital">
+      <div class="qrl">Cartão digital</div>
+    </div>
+  </div>
+  <div class="bleed"></div>
+</div>
+</body>
+</html>
