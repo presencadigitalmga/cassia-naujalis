@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cassia Naujalis</title>
+<meta name="description" content="Cassia Naujalis, analista de marketing e arte-finalista em Maringá. Social media, criação de rótulos, produção de vídeo e comunicação visual.">
+<meta property="og:title" content="Cassia Naujalis · Marketing com intenção">
+<meta property="og:description" content="Social media, rótulos, vídeo e comunicação visual. Tudo comunica, e eu faço isso com intenção.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://presencadigitalmga.github.io/cassia-naujalis/assets/img/posts/p06_00.jpg">
+<meta property="og:url" content="https://presencadigitalmga.github.io/cassia-naujalis/">
+<meta name="theme-color" content="#FAF2E3">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%232A2625'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Arial' font-weight='700' font-size='30' fill='%23D4A786'%3ECN%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112,600;112,700;112,800&family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@1&display=swap">
+<link rel="stylesheet" href="assets/css/base.css">
+<style>
+/* ---------- topo ---------- */
+.top { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 1rem; }
+.brand { font-family: var(--f-display); font-stretch: 112%; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; font-size: .95rem; color: var(--ink); text-decoration: none; }
+.brand span { color: var(--accent); }
+.nav { display: flex; gap: 1.4rem; font-size: .88rem; font-weight: 500; }
+.nav a { color: var(--ink-2); text-decoration: none; }
+.nav a:hover { color: var(--ink); }
+@media (max-width: 700px) { .nav { display: none; } }
+
+/* ---------- hero ---------- */
+.hero { padding: clamp(3rem, 8vw, 6.5rem) 0 clamp(2rem, 5vw, 4rem); }
+.hero .wrap { display: grid; grid-template-columns: 1.4fr .9fr; gap: 3rem; align-items: end; }
+.hero h1 { margin-top: 1rem; }
+.hero h1 em { display: block; font-family: var(--f-serif); font-style: italic; font-weight: 400; text-transform: none; letter-spacing: 0; font-size: .42em; color: var(--accent); margin-top: .35em; line-height: 1.15; }
+.hero .lede { margin-top: 1.6rem; font-size: 1.15rem; color: var(--ink-2); max-width: 52ch; }
+.hero .cta { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 2rem; }
+
+/* ficha técnica em estilo de rótulo */
+.ficha { background: var(--paper); border: 1.5px solid var(--ink); padding: 1.1rem 1.2rem 1.3rem; font-size: .9rem; box-shadow: var(--shadow); }
+.ficha .t { font-family: var(--f-display); font-stretch: 112%; font-weight: 800; text-transform: uppercase; font-size: 1.35rem; border-bottom: 6px solid var(--ink); padding-bottom: .4rem; margin-bottom: .2rem; }
+.ficha dl { margin: 0; }
+.ficha .row { display: flex; justify-content: space-between; gap: 1rem; padding: .45rem 0; border-bottom: 1px solid var(--line); }
+.ficha .row:last-child { border-bottom: 6px solid var(--ink); }
+.ficha dt { font-weight: 600; }
+.ficha dd { margin: 0; text-align: right; color: var(--ink-2); }
+.ficha .foot { font-size: .72rem; color: var(--ink-3); padding-top: .6rem; line-height: 1.4; }
+@media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; } .ficha { max-width: 420px; } }
+
+/* faixa de amostras */
+.strip { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; padding: 0 0 3.5rem; }
+.strip img { aspect-ratio: 1; object-fit: cover; width: 100%; }
+@media (max-width: 700px) { .strip { grid-template-columns: repeat(3, 1fr); } .strip img:nth-child(n+4) { display: none; } }
+
+/* ---------- seções ---------- */
+.sec { padding: clamp(3rem, 7vw, 5.5rem) 0; }
+.sec-head { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: end; margin-bottom: 2.5rem; }
+.sec-head p { color: var(--ink-2); }
+@media (max-width: 860px) { .sec-head { grid-template-columns: 1fr; } }
+
+/* sobre */
+.sobre { background: var(--paper); border-block: 1px solid var(--line); }
+.sobre .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+.sobre .quote { font-family: var(--f-serif); font-style: italic; font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1.2; color: var(--ink); max-width: 20ch; }
+.sobre .quote b { color: var(--accent); font-weight: 400; }
+.sobre .txt p + p { margin-top: 1rem; }
+.formacao { margin-top: 2rem; display: grid; gap: .6rem; font-size: .92rem; }
+.formacao div { display: grid; grid-template-columns: 96px 1fr; gap: 1rem; padding: .6rem 0; border-top: 1px solid var(--line); }
+.formacao span:first-child { color: var(--accent); font-weight: 600; font-variant-numeric: tabular-nums; }
+@media (max-width: 860px) { .sobre .wrap { grid-template-columns: 1fr; } }
+
+/* serviços */
+.serv { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.serv article { background: var(--bg); padding: 1.6rem 1.4rem 1.8rem; display: flex; flex-direction: column; gap: .8rem; }
+.serv article:hover { background: var(--paper); }
+.serv h3 { font-size: 1.15rem; }
+.serv p { font-size: .95rem; color: var(--ink-2); }
+.serv .tag { font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+.serv .ico { width: 34px; height: 34px; color: var(--accent); }
+@media (max-width: 960px) { .serv { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .serv { grid-template-columns: 1fr; } }
+
+/* portfólio */
+.filters { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.6rem; }
+.chip { font: 500 .85rem/1 var(--f-body); padding: .6rem .95rem; border-radius: 999px; border: 1px solid var(--line); background: transparent; color: var(--ink-2); cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.item { position: relative; overflow: hidden; background: var(--paper); border: 1px solid var(--line); cursor: pointer; padding: 0; text-align: left; font: inherit; color: inherit; }
+.item img { aspect-ratio: 1; object-fit: cover; width: 100%; transition: transform .35s ease; }
+.item.tall img { aspect-ratio: 4 / 5; }
+.item:hover img { transform: scale(1.03); }
+.item .cap { padding: .8rem .9rem .9rem; border-top: 1px solid var(--line); }
+.item .cap b { display: block; font-weight: 600; font-size: .92rem; }
+.item .cap span { font-size: .78rem; color: var(--ink-3); }
+.item[hidden] { display: none; }
+@media (max-width: 960px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 600px) { .grid { grid-template-columns: repeat(2, 1fr); gap: .6rem; } }
+
+/* lightbox */
+dialog.lb { border: 0; padding: 0; background: var(--paper); color: var(--ink); width: min(960px, 94vw); max-height: 92vh; box-shadow: var(--shadow); }
+dialog.lb::backdrop { background: rgba(20, 16, 14, .78); }
+.lb-in { display: grid; grid-template-columns: 1.15fr 1fr; }
+.lb-in img { width: 100%; max-height: 92vh; object-fit: contain; background: #111; }
+.lb-txt { padding: 2rem 1.8rem; display: flex; flex-direction: column; gap: .9rem; overflow: auto; }
+.lb-txt h3 { font-size: 1.4rem; }
+.lb-txt p { color: var(--ink-2); font-size: .98rem; }
+.lb-close { margin-top: auto; align-self: flex-start; }
+@media (max-width: 760px) { .lb-in { grid-template-columns: 1fr; } .lb-in img { max-height: 55vh; } }
+
+/* vídeo */
+.video { background: var(--ink); color: var(--bg); }
+.video .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; }
+.video .eyebrow { color: var(--accent-soft); }
+.video p { color: color-mix(in srgb, var(--bg) 78%, var(--ink)); }
+.video .btn { background: var(--accent-soft); border-color: var(--accent-soft); color: var(--ink); }
+.reel { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.reel img { aspect-ratio: 9 / 12; object-fit: cover; }
+@media (max-width: 860px) { .video .wrap { grid-template-columns: 1fr; } }
+
+/* processo (sequência real de trabalho) */
+.proc { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; counter-reset: p; }
+.proc div { border-top: 2px solid var(--ink); padding-top: 1rem; }
+.proc div::before { counter-increment: p; content: counter(p, decimal-leading-zero); font-family: var(--f-display); font-stretch: 112%; font-weight: 800; font-size: 2rem; color: var(--accent); display: block; margin-bottom: .4rem; }
+.proc h3 { margin-bottom: .4rem; }
+.proc p { font-size: .93rem; color: var(--ink-2); }
+@media (max-width: 860px) { .proc { grid-template-columns: repeat(2, 1fr); } }
+
+/* contato */
+.contato { border-top: 1px solid var(--line); }
+.contato .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+.contato h2 em { display: block; font-family: var(--f-serif); font-style: italic; font-weight: 400; text-transform: none; font-size: .6em; color: var(--accent); margin-top: .2em; }
+.clist { display: grid; gap: .3rem; margin-top: 1.5rem; }
+.clist a { display: flex; align-items: center; gap: .9rem; padding: .9rem 0; border-bottom: 1px solid var(--line); text-decoration: none; color: var(--ink); font-weight: 500; }
+.clist a:hover { color: var(--accent); }
+.clist svg { width: 20px; height: 20px; color: var(--accent); flex: none; }
+.clist small { margin-left: auto; color: var(--ink-3); font-weight: 400; }
+form { display: grid; gap: .8rem; }
+label { font-size: .82rem; font-weight: 600; color: var(--ink-2); display: grid; gap: .35rem; }
+input, textarea { font: inherit; padding: .8rem .9rem; border: 1px solid var(--line); background: var(--paper); color: var(--ink); border-radius: var(--radius); width: 100%; }
+textarea { min-height: 120px; resize: vertical; }
+@media (max-width: 860px) { .contato .wrap { grid-template-columns: 1fr; } }
+
+footer { padding: 2rem 0 3rem; font-size: .82rem; color: var(--ink-3); }
+footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+footer a { color: var(--ink-3); }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">Cassia <span>Naujalis</span></a>
+    <nav class="nav" aria-label="Seções">
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#video">Vídeo</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn accent" href="https://wa.me/5544998594288?text=Ol%C3%A1%20Cassia!%20Vi%20seu%20site%20e%20quero%20conversar." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Analista de marketing · Arte-finalista · Maringá, PR</span>
+      <h1>Cassia<br>Naujalis
+        <em>Tudo comunica, e eu faço isso com intenção.</em>
+      </h1>
+      <p class="lede">Planejo, crio e finalizo: do plano de marketing ao post publicado, do rótulo na prateleira ao vídeo editado. Marketing estratégico com execução visual na mesma pessoa.</p>
+      <div class="cta">
+        <a class="btn" href="#portfolio">Ver portfólio</a>
+        <a class="btn ghost" href="cartao.html">Cartão digital</a>
+      </div>
+    </div>
+
+    <aside class="ficha" aria-label="Ficha profissional">
+      <div class="t">Ficha profissional</div>
+      <dl>
+        <div class="row"><dt>Formação</dt><dd>Marketing · UNICV</dd></div>
+        <div class="row"><dt>Pós</dt><dd>Gestão Comercial · UNICV</dd></div>
+        <div class="row"><dt>Atuação desde</dt><dd>2018</dd></div>
+        <div class="row"><dt>Frentes</dt><dd>Estratégia · Social · Rótulos · Vídeo</dd></div>
+        <div class="row"><dt>Segmentos</dt><dd>Saúde · Farmácia · Seguros</dd></div>
+        <div class="row"><dt>Em desenvolvimento</dt><dd>Comercial</dd></div>
+      </dl>
+      <div class="foot">Referência de rótulo: a mesma lógica que uso para embalagens de suplementos, aplicada a mim mesma. Conteúdo sem enrolação, benefícios em destaque.</div>
+    </aside>
+  </div>
+</section>
+
+<div class="wrap strip" aria-hidden="true">
+  <img src="assets/img/posts/p06_00.jpg" alt="">
+  <img src="assets/img/posts/p04_02.jpg" alt="">
+  <img src="assets/img/posts/p07_00.jpg" alt="">
+  <img src="assets/img/posts/p03_01.jpg" alt="">
+  <img src="assets/img/posts/p05_03.jpg" alt="">
+  <img src="assets/img/posts/p04_01.jpg" alt="">
+</div>
+
+<section class="sec sobre" id="sobre">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Sobre</span>
+      <p class="quote" style="margin-top:1rem">Estratégia que vira <b>peça pronta</b>, não só apresentação.</p>
+    </div>
+    <div class="txt">
+      <p>Sou profissional de marketing formada em 2018, com foco desde a graduação na área estratégica. Tenho experiência em desenvolver e executar planos de marketing completos, analisar mercado para identificar tendências e oportunidades, e contribuir para o posicionamento e crescimento de marcas.</p>
+      <p>Na prática, isso significa que eu mesma finalizo o que planejo: posts, rótulos, banners, fachadas e vídeos. Tenho forte interesse em abordagens inovadoras e no uso de dados para otimizar estratégias e chegar a resultados mensuráveis. Hoje também me desenvolvo na área comercial, para fechar o ciclo entre marketing e venda.</p>
+      <div class="formacao">
+        <div><span>2016–2018</span><span>Graduação em Marketing, UNICV</span></div>
+        <div><span>2019–2021</span><span>Gestão Comercial, UNICV</span></div>
+        <div><span>2023–2024</span><span>Social media e arte-final para PAM Saúde e Manipulação Farmácias São Paulo</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="servicos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow">Serviços</span><h2 style="margin-top:.6rem">O que eu entrego</h2></div>
+      <p>Quatro frentes que se combinam. Uma campanha pode começar no planejamento e terminar no rótulo, no post e no vídeo, tudo com a mesma linguagem.</p>
+    </div>
+    <div class="serv">
+      <article>
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+        <span class="tag">Estratégia</span>
+        <h3>Planejamento de marketing</h3>
+        <p>Plano de marketing, análise de mercado e concorrência, calendário editorial e posicionamento de marca com metas mensuráveis.</p>
+      </article>
+      <article>
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        <span class="tag">Social media</span>
+        <h3>Conteúdo para redes</h3>
+        <p>Posts institucionais, datas comemorativas, campanhas de causa, depoimentos, promoções e lançamentos de produto, do roteiro à arte final.</p>
+      </article>
+      <article>
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 3h8l1 4v11a3 3 0 0 1-3 3h-4a3 3 0 0 1-3-3V7z"/><path d="M7 11h10"/><path d="M7 15h10"/></svg>
+        <span class="tag">Embalagem</span>
+        <h3>Criação de rótulos</h3>
+        <p>Rótulos para suplementos, cosméticos e alimentos funcionais, alinhados à identidade da marca e às exigências de informação do produto.</p>
+      </article>
+      <article>
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3z"/></svg>
+        <span class="tag">Vídeo e visual</span>
+        <h3>Vídeo e comunicação visual</h3>
+        <p>Roteiro, filmagem e edição de vídeos para redes; banners, wind banners, fachadas e materiais impressos.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="portfolio">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow">Portfólio</span><h2 style="margin-top:.6rem">Trabalhos selecionados</h2></div>
+      <p>Peças publicadas para PAM Saúde, Manipulação Farmácias São Paulo, Dr. Eduardo Borgonhone e Covery Seguros. Clique para ver a intenção por trás de cada uma.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filtrar por categoria">
+      <button class="chip" aria-pressed="true" data-f="all">Tudo</button>
+      <button class="chip" aria-pressed="false" data-f="social">Social media</button>
+      <button class="chip" aria-pressed="false" data-f="rotulo">Rótulos</button>
+      <button class="chip" aria-pressed="false" data-f="visual">Comunicação visual</button>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<dialog class="lb" id="lb" aria-label="Detalhe do trabalho">
+  <div class="lb-in">
+    <img id="lb-img" src="" alt="">
+    <div class="lb-txt">
+      <span class="eyebrow" id="lb-cli"></span>
+      <h3 id="lb-title"></h3>
+      <p id="lb-desc"></p>
+      <button class="btn ghost lb-close" id="lb-close" type="button">Fechar</button>
+    </div>
+  </div>
+</dialog>
+
+<section class="sec video" id="video">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Produção e edição de vídeo</span>
+      <h2 style="margin-top:.6rem">Do roteiro ao corte final</h2>
+      <p style="margin-top:1.2rem">Minha experiência em vídeo cobre todas as etapas: idealização do roteiro alinhado à estratégia, produção da filmagem e edição final. Cada vídeo precisa comunicar a mensagem da marca de forma envolvente, em formatos e narrativas que engajem o público e cumpram os objetivos de marketing.</p>
+      <a class="btn" style="margin-top:1.6rem" href="https://drive.google.com/drive/folders/1kO665WQRFzrbiUOxx-hnUV26nFZgI-P2" target="_blank" rel="noopener">Assistir aos vídeos</a>
+    </div>
+    <div class="reel" aria-hidden="true">
+      <img src="assets/img/posts/p07_02.jpg" alt="">
+      <img src="assets/img/posts/p09_02.jpg" alt="">
+      <img src="assets/img/posts/p09_01.jpg" alt="">
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="processo">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow">Como eu trabalho</span><h2 style="margin-top:.6rem">Da análise à peça publicada</h2></div>
+      <p>A ordem importa: nada vai para a arte antes de ter um porquê. E nada fica no papel depois que tem.</p>
+    </div>
+    <div class="proc">
+      <div><h3>Diagnóstico</h3><p>Análise de mercado, público e concorrência. Onde a marca está e onde pode chegar.</p></div>
+      <div><h3>Plano</h3><p>Objetivos, calendário editorial, campanhas de data e de produto, metas mensuráveis.</p></div>
+      <div><h3>Criação</h3><p>Roteiro, copy e arte final: post, rótulo, banner ou vídeo, com a linguagem da marca.</p></div>
+      <div><h3>Medição</h3><p>Acompanhamento de resultados e ajuste de rota com base em dados, não em achismo.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec contato" id="contato">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Contato</span>
+      <h2 style="margin-top:.6rem">Vamos conversar? <em>Respondo rápido no WhatsApp.</em></h2>
+      <div class="clist">
+        <a href="https://wa.me/5544998594288" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.6.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 12 12 0 0 0 4.6 4c1.7.7 2.3.8 3.2.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>(44) 99859-4288 <small>WhatsApp</small></a>
+        <a href="mailto:cassia.nau@hotmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>cassia.nau@hotmail.com <small>E-mail</small></a>
+        <a href="https://www.linkedin.com/in/cassia-naujalis" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.5 8.5A1.5 1.5 0 1 0 6.5 5.5a1.5 1.5 0 0 0 0 3ZM5.25 10h2.5v9h-2.5zM10 10h2.4v1.3c.4-.7 1.3-1.5 2.8-1.5 3 0 3.5 2 3.5 4.5V19h-2.5v-4.2c0-1 0-2.3-1.4-2.3s-1.6 1.1-1.6 2.2V19H10z"/></svg>Cassia Naujalis <small>LinkedIn</small></a>
+        <a href="cassia-naujalis.vcf" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 4v12m0 0 4-4m-4 4-4-4"/><path d="M4 20h16"/></svg>Salvar contato <small>.vcf</small></a>
+      </div>
+    </div>
+    <form action="https://formsubmit.co/cassia.nau@hotmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Contato pelo site">
+      <input type="hidden" name="_captcha" value="false">
+      <label>Seu nome <input name="nome" required autocomplete="name"></label>
+      <label>Seu e-mail ou WhatsApp <input name="contato" required></label>
+      <label>Sobre o que é? <textarea name="mensagem" required placeholder="Ex.: preciso de posts para o Instagram da minha farmácia e um rótulo novo."></textarea></label>
+      <button class="btn" type="submit">Enviar mensagem</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="ano"></span> Cassia Naujalis · Maringá, PR</span>
+    <span><a href="links.html">Links</a> · <a href="cartao.html">Cartão digital</a> · <a href="curriculo.html">Currículo</a></span>
+  </div>
+</footer>
+
+<script>
+const P = 'assets/img/posts/';
+const works = [
+  { f:'p03_00.jpg', cat:'social', cli:'PAM Saúde', t:'Dia das Mães', d:'Post em homenagem ao Dia das Mães (14 de maio). Usa uma imagem emotiva para celebrar a data e reforçar os laços familiares, associando a marca a sentimentos positivos e de carinho.' },
+  { f:'p03_01.jpg', cat:'social', cli:'PAM Saúde', t:'A fruta da felicidade', d:'Elemento visual atraente (a banana) para promover a ideia de "fruta da felicidade" e informar sobre o triptofano, associando o consumo à sensação de bem-estar. Alinhado à campanha Setembro Amarelo.' },
+  { f:'p03_02.jpg', cat:'social', cli:'PAM Saúde + Rede Cross', t:'Depoimento de beneficiária', d:'Relato da beneficiária Marli Pivatto elogiando o atendimento humanizado. Conteúdo eficaz para construir confiança e credibilidade a partir da experiência de clientes reais.' },
+  { f:'p03_03.jpg', cat:'social', cli:'PAM Saúde', t:'7 de Setembro', d:'Conteúdo institucional comemorativo que conecta a marca a datas importantes para o público brasileiro, reforçando um sentimento de patriotismo alinhado aos valores da empresa.' },
+  { f:'p04_00.jpg', cat:'social', cli:'PAM Saúde', t:'Checklist de fim de semana', d:'Sugestões de atividades para relaxar e recarregar as energias. Gera identificação, mostrando que a marca se preocupa com o bem-estar dos seguidores além dos serviços de saúde.' },
+  { f:'p04_01.jpg', cat:'social', cli:'PAM Saúde', t:'5 benefícios da Vitamina C', d:'Conteúdo informativo sobre saúde e bem-estar, no formato de lista, que a PAM Saúde compartilha com seu público.' },
+  { f:'p04_02.jpg', cat:'social', cli:'PAM Saúde', t:'Setembro Amarelo', d:'Campanha do mês de prevenção ao suicídio. A mensagem "Você não está sozinho! Escolha a vida!" e o laço amarelo são centrais. Demonstra a responsabilidade social da marca com a saúde mental.' },
+  { f:'p04_03.jpg', cat:'social', cli:'PAM Saúde', t:'Lembrete: faça uma cotação', d:'Lembrete sobre a importância de cuidar da saúde, incentivando o público a fazer uma cotação. Conteúdo direto, com chamada para ação clara.' },
+  { f:'p05_00.jpg', cat:'social', cli:'Manipulação Farmácias São Paulo', t:'Mega promoção Okralin', d:'Post promocional destacando o preço especial e os benefícios do Okralin, complexo natural que auxilia na redução da absorção de gordura.' },
+  { f:'p05_01.jpg', cat:'social', cli:'Manipulação Farmácias São Paulo', t:'Dia do Farmacêutico', d:'Homenagem aos farmacêuticos, reconhecendo sua importância para a saúde da comunidade e fortalecendo a imagem da empresa como quem valoriza seus colaboradores e a profissão.' },
+  { f:'p05_02.jpg', cat:'social', cli:'Manipulação Farmácias São Paulo', t:'Aniversário de Maringá', d:'Post institucional parabenizando Maringá pelos 77 anos. Exemplo de conteúdo que fortalece a conexão da marca com o público local.' },
+  { f:'p05_03.jpg', cat:'social', cli:'Manipulação Farmácias São Paulo', t:'Lançamento Gummy Tina', d:'Destaque dos principais benefícios da goma de creatina: zero glúten, zero açúcar, sabor maçã verde e auxílio no desempenho físico, para um público preocupado com saúde e performance.' },
+  { f:'p06_00.jpg', cat:'rotulo', cli:'Manipulação Farmácias São Paulo', t:'Rótulo Botox Like', d:'Rótulo criado para transmitir modernidade, sofisticação e os benefícios anti-idade e rejuvenescedores do produto.' },
+  { f:'p06_01.jpg', cat:'rotulo', cli:'Dr. Eduardo Borgonhone', t:'Bombom Energia e Força', d:'Rótulo de bombom funcional pré-treino. Elementos visuais remetem ao chocolate e à vitalidade; paleta e tipografia escolhidas para o público de nutrição esportiva.', tall:true },
+  { f:'p06_02.jpg', cat:'rotulo', cli:'Dr. Eduardo Borgonhone', t:'Bombom Meu Descanso', d:'Rótulo de bombom funcional para qualidade do sono. Transmite tranquilidade, conforto e bem-estar, com elementos que remetem a uma noite relaxante.' },
+  { f:'p07_00.jpg', cat:'rotulo', cli:'Manipulação Farmácias São Paulo', t:'Rótulo Gummy Tina', d:'Embalagem atraente e informativa, comunicando os benefícios de forma clara e divertida. O verde vibrante remete ao sabor maçã verde e à energia.' },
+  { f:'p07_01.jpg', cat:'rotulo', cli:'Manipulação Farmácias São Paulo', t:'Rótulo Ômega 3 Peixinho', d:'Suplemento de ômega 3 para crianças. Identidade lúdica com cores vibrantes, ilustração amigável de um peixinho e tipografia alegre e de fácil leitura.' },
+  { f:'p07_02.jpg', cat:'rotulo', cli:'Manipulação Farmácias São Paulo', t:'Rótulo Akkermat', d:'Suplemento para auxílio no emagrecimento. Alinhamento visual com a marca registrada da fórmula Akkermat, com paleta semelhante para conexão imediata com quem já conhece o ingrediente.' },
+  { f:'p09_00.jpg', cat:'visual', cli:'Manipulação Farmácias São Paulo', t:'Banner Projeto ODS', d:'Banner impresso apresentando os selos dos Objetivos de Desenvolvimento Sustentável conquistados pela empresa, com QR Code para o Instagram.', tall:true },
+  { f:'p09_01.jpg', cat:'visual', cli:'Covery Corretora de Seguros', t:'Wind banner', d:'Wind banner para ponto de venda com planos de saúde, odontológicos e seguro de vida, com chamada para cotação e contatos.', tall:true },
+  { f:'p09_02.jpg', cat:'visual', cli:'Manipulação Farmácias São Paulo', t:'Design de fachada', d:'Comunicação visual da fachada da loja, integrando a identidade da marca ao ponto físico, com adaptação para campanhas como a Black Friday.', tall:true },
+];
+const grid = document.getElementById('grid');
+grid.innerHTML = works.map((w, i) => `
+  <button class="item${w.tall ? ' tall' : ''}" data-cat="${w.cat}" data-i="${i}" type="button">
+    <img src="${P + w.f}" alt="${w.t}, ${w.cli}" loading="lazy">
+    <span class="cap"><b>${w.t}</b><span>${w.cli}</span></span>
+  </button>`).join('');
+
+document.querySelectorAll('.chip').forEach(c => c.addEventListener('click', () => {
+  document.querySelectorAll('.chip').forEach(x => x.setAttribute('aria-pressed', x === c));
+  const f = c.dataset.f;
+  grid.querySelectorAll('.item').forEach(el => el.hidden = !(f === 'all' || el.dataset.cat === f));
+}));
+
+const lb = document.getElementById('lb');
+grid.addEventListener('click', e => {
+  const b = e.target.closest('.item'); if (!b) return;
+  const w = works[b.dataset.i];
+  document.getElementById('lb-img').src = P + w.f;
+  document.getElementById('lb-img').alt = w.t;
+  document.getElementById('lb-cli').textContent = w.cli;
+  document.getElementById('lb-title').textContent = w.t;
+  document.getElementById('lb-desc').textContent = w.d;
+  lb.showModal();
+});
+document.getElementById('lb-close').addEventListener('click', () => lb.close());
+lb.addEventListener('click', e => { if (e.target === lb) lb.close(); });
+document.getElementById('ano').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

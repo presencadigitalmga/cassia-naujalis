@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Assinatura · Cassia Naujalis</title>
+<style>
+body { font-family: Arial, sans-serif; background: #FAF2E3; color: #2A2625; padding: 2rem 1rem; }
+.box { max-width: 640px; margin: 0 auto; background: #fff; padding: 1.5rem; border: 1px solid #E4D8C4; }
+h1 { font-size: 1.1rem; margin: 0 0 .4rem; }
+p.help { font-size: .85rem; color: #524F4E; margin: 0 0 1.2rem; line-height: 1.5; }
+.preview { border: 1px dashed #E4D8C4; padding: 1rem; margin-bottom: 1rem; }
+button { font: 600 .85rem Arial, sans-serif; padding: .6rem 1rem; border-radius: 999px; border: 1.5px solid #2A2625; background: #2A2625; color: #FAF2E3; cursor: pointer; }
+</style>
+</head>
+<body>
+<div class="box">
+  <h1>Assinatura de e-mail</h1>
+  <p class="help">Clique em "Copiar assinatura" e cole em Outlook/Hotmail (Configurações → Redigir e responder → Assinatura) ou Gmail (Configurações → Assinatura). Formatação em tabela para funcionar nos clientes de e-mail. Substitua a inicial pela foto quando tiver o link da imagem hospedada.</p>
+
+  <div class="preview" id="sig">
+    <!-- INÍCIO DA ASSINATURA -->
+    <table cellpadding="0" cellspacing="0" border="0" style="font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#2A2625;line-height:1.4">
+      <tr>
+        <td style="padding-right:14px;vertical-align:top">
+          <table cellpadding="0" cellspacing="0" border="0"><tr>
+            <td style="width:56px;height:56px;border-radius:28px;background:#2A2625;color:#D4A786;text-align:center;vertical-align:middle;font-weight:bold;font-size:20px;font-family:Arial,sans-serif">CN</td>
+          </tr></table>
+        </td>
+        <td style="border-left:3px solid #D4A786;padding-left:14px;vertical-align:top">
+          <div style="font-size:16px;font-weight:bold;letter-spacing:.5px;text-transform:uppercase;color:#2A2625">Cassia Naujalis</div>
+          <div style="font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#B8783F;font-weight:bold;margin:2px 0 6px">Analista de Marketing · Arte-finalista</div>
+          <div><a href="https://wa.me/5544998594288" style="color:#2A2625;text-decoration:none">(44) 99859-4288</a> &nbsp;·&nbsp; <a href="mailto:cassia.nau@hotmail.com" style="color:#2A2625;text-decoration:none">cassia.nau@hotmail.com</a></div>
+          <div style="margin-top:2px"><a href="https://www.linkedin.com/in/cassia-naujalis" style="color:#B8783F;text-decoration:none">LinkedIn</a> &nbsp;·&nbsp; <a href="https://presencadigitalmga.github.io/cassia-naujalis/" style="color:#B8783F;text-decoration:none">Portfólio</a> &nbsp;·&nbsp; Maringá, PR</div>
+          <div style="margin-top:8px;font-style:italic;color:#524F4E;font-size:12px">"Tudo comunica, e eu faço isso com intenção."</div>
+        </td>
+      </tr>
+    </table>
+    <!-- FIM DA ASSINATURA -->
+  </div>
+
+  <button type="button" id="copy">Copiar assinatura</button>
+  <span id="ok" style="font-size:.85rem;color:#524F4E;margin-left:.6rem"></span>
+</div>
+<script>
+document.getElementById('copy').addEventListener('click', async () => {
+  const el = document.getElementById('sig');
+  const html = el.innerHTML, text = el.innerText;
+  try {
+    await navigator.clipboard.write([new ClipboardItem({ 'text/html': new Blob([html], { type: 'text/html' }), 'text/plain': new Blob([text], { type: 'text/plain' }) })]);
+    document.getElementById('ok').textContent = 'Copiada. Agora cole no seu e-mail.';
+  } catch (e) {
+    const r = document.createRange(); r.selectNodeContents(el);
+    const s = getSelection(); s.removeAllRanges(); s.addRange(r); document.execCommand('copy');
+    document.getElementById('ok').textContent = 'Copiada (modo compatível).';
+  }
+});
+</script>
+</body>
+</html>
